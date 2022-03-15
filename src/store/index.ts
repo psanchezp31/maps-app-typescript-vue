@@ -1,14 +1,18 @@
-import { createStore } from 'vuex';
+import { createStore } from "vuex";
 
-import exampleModule from './module-template'
-import {ExampleStateInterface} from './module-template/state'
+import placesModule from "./places";
+import { PlacesState } from "./places/state";
+import mapModule from './map/index';
+import { MapState } from './map/state';
 
-export interface StateInterface{
-  example: ExampleStateInterface
+export interface StateInterface {
+  places: PlacesState;
+  map: MapState;
 }
 
 export default createStore<StateInterface>({
-  modules:{
-    example:exampleModule
-  }
-})
+  modules: {
+    places: placesModule,
+    map: mapModule
+  },
+});
