@@ -14,11 +14,16 @@ export const usePlacesStore = () => {
   return {
     //state
     isLoading: computed(() => store.state.places.isLoading),
-    userLocation: computed (()=> store.state.places.userLocation),
+    userLocation: computed(() => store.state.places.userLocation),
+    places: computed(()=>store.state.places.places),
+    isLoadingPlaces: computed(()=>store.state.places.isLoadingPlaces),
     //getters
-    isUserLocationReady: computed(()=> store.getters['places/isUserLocationReady'])
+    isUserLocationReady: computed(
+      () => store.getters["places/isUserLocationReady"]
+    ),
     //actions
-
+    searchPlacesByTerm: (query = "") =>
+      store.dispatch("places/searchPlacesByTerm", query),
     //mutations
   };
 };

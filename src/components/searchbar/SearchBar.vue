@@ -4,7 +4,6 @@
   <div class="searchbar-container">
     <input class="form-control" placeholder="Buscar Lugares..." type="text" v-model="searchTerm" />
     <SearchResults /> 
-    {{debouncedValue}}
   </div>
 </template>
 
