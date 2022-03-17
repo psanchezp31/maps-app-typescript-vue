@@ -2,6 +2,7 @@
   <MapView/>
   <MyLocationBtn/>
   <SearchBar/>
+  <TripDetails />
 </template>
 
 <script lang="ts">
@@ -10,6 +11,7 @@ import { defineComponent } from 'vue';
 import MapView from '@/components/mapview/MapView.vue';
 import MyLocationBtn from '@/components/my-location-btn/MyLocationBtn.vue';
 import SearchBar from '@/components/searchbar/SearchBar.vue'
+import TripDetails from '@/components/trip-details/TripDetails.vue';
 
 
 export default defineComponent({
@@ -17,7 +19,8 @@ export default defineComponent({
   components: {
     MapView,
     MyLocationBtn,
-    SearchBar
+    SearchBar,
+    TripDetails
   },
   setup(){
     usePlacesStore()

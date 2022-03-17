@@ -17,6 +17,7 @@
       <p>{{ place.place_name }}</p>
       <div align="right">
         <button
+        @click.self="getRouteDirections(place)"
           class="btn btn-outline-primary btn-sm"
           :class="
             place.id === activePlace
